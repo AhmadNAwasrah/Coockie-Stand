@@ -1,31 +1,15 @@
 'use strict';
-let hours = [
-    "6am",
-    "7am",
-    "8am",
-    "9am",
-    "10am",
-    "11am",
-    "12pm",
-    "1pm",
-    "2pm",
-    "3pm",
-    "4pm",
-    "5pm",
-    "6pm",
-    "7pm"];
+let hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
 let seattle = {
     storeName: 'Seattle',
     minCustPerHour: 23,
     maxCustPerHour: 65,
     avgCustCookies: 6.3,
     randomCustPerHour: [],
-    //[35,45,100,30....]
     salesPerHour: [],
     totalPerHour: 0,
-    //[35*6.3,45*6.3,100*6.3,....]
     randomCustNumber: function () {
-        for (let hour = 0; hour < hours.length; hour++) {
+        for (let i = 0; i < hours.length; i++) {
             this.randomCustPerHour.push(Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1) + this.minCustPerHour));
         }
     },
@@ -34,6 +18,7 @@ let seattle = {
             this.salesPerHour.push(Math.ceil(this.randomCustPerHour[i] * this.avgCustCookies));
             this.totalPerHour += this.salesPerHour[i];
         }
+        
     },
     render: function () {
         let container = document.getElementById('sales');
@@ -42,14 +27,14 @@ let seattle = {
         h2El.textContent = this.storeName;
         let ulEl = document.createElement('ul');
         container.appendChild(ulEl);
-        for (let hour = 0; hour < hours.length; hour++) {
+        for (let i = 0; i < hours.length; i++) {
             let liEl = document.createElement('li');
             ulEl.appendChild(liEl);
-            liEl.textContent = `${hours[hour]}:${this.salesPerHour[hour]} cookies`
+            liEl.textContent = `${hours[i]}:${this.salesPerHour[i]} cookies`
         }
         let totalLi = document.createElement('li');
         ulEl.appendChild(totalLi);
-        totalLi.textContent = `Total: ${this.totalPerHour} cookies`
+        totalLi.textContent = 'Total' + this.totalPerHour + 'Cookies'
 
     }
 
@@ -57,7 +42,7 @@ let seattle = {
 seattle.randomCustNumber();
 seattle.salesCookies();
 seattle.render();
-
+console.log('hello')
 let tokyo = {
     storeName: 'Tokyo',
     minCustPerHour: 3,
@@ -93,7 +78,7 @@ let tokyo = {
         }
         let totalLi = document.createElement('li');
         ulEl.appendChild(totalLi);
-        totalLi.textContent = `Total: ${this.totalPerHour} cookies`
+        totalLi.textContent = 'Total' + this.totalPerHour + 'Cookies'
 
     }
 
@@ -107,12 +92,12 @@ let dubai = {
     maxCustPerHour: 38,
     avgCustCookies: 3.7,
     randomCustPerHour: [],
-    //[35,45,100,30....]
+
     salesPerHour: [],
     totalPerHour: 0,
-    //[35*6.3,45*6.3,100*6.3,....]
+
     randomCustNumber: function () {
-        for (let hour = 0; hour < hours.length; hour++) {
+        for (let i = 0; i < hours.length; i++) {
             this.randomCustPerHour.push(Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1) + this.minCustPerHour));
         }
     },
@@ -189,7 +174,7 @@ Paris.randomCustNumber();
 Paris.salesCookies();
 Paris.render();
 
-let lima	 = {
+let lima = {
     storeName: 'Lima	',
     minCustPerHour: 2,
     maxCustPerHour: 16,
