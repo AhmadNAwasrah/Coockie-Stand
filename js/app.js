@@ -109,8 +109,6 @@ function tableFotter() {
     var tableEl = document.getElementById('sales');
     var trEl = document.createElement('tr');
     var tdNameEl = document.createElement('td');
-    //tdNameEl.textContent = this.storeName;
-    //trEl.appendChild(tdNameEl);
     tableEl.appendChild(trEl);
     var trEl = document.createElement('tr');
     var tdNameEl = document.createElement('td');
