@@ -1,2 +1,70 @@
-h2{background-color: blue;}
-ul{background-color:grey;}
+h2{background-color: blue; text-align: center;}
+ ul{background-color:rgb(236, 152, 152);} 
+
+
+table,tr,td,th{
+border: 1px solid black;
+background-color: rgb(218, 198, 208);
+size: 400px;
+text-align: center;
+font-family :Arial, Helvetica, sans-serif;
+text-indent: initial;
+
+  
+}
+body{margin: 30px;
+background-color: rgb(49, 43, 43);}
+td {padding: 10px;}
+
+div{
+        background-color: rgb(241, 58, 95);
+        text-align: center;
+        font-weight: bolder;
+
+}
+header img{padding: 20px;
+padding-left: 250px;}
+img{padding: auto;
+margin: 30px;}
+#button {
+background-color: rgb(255, 255, 255);
+margin: auto;
+margin-right: 200px;
+
+}
+#left{
+    width: 30%;
+    float: left;}
+#righte{
+    size:600px;
+        width: 30%;
+        float: right;
+        background-color: rgb(248, 143, 143);
+        font-size: large;
+       margin-top: 30px;
+    }
+ #center
+ { width: 30%;
+    float: center;} 
+
+#Working {
+    width: 25%;
+    float: right;
+        background-color: rgb(211, 172, 172);
+        font-size: large;
+    }
+    #cookies{background-color: rgb(211, 172, 172);
+        float: right;
+        width: 60%;
+        font-size: large;}
+        #about{width: 60%;
+        float: left;}
+        #aboutP{width: 30%;
+            float: right;
+        background-color: rgb(145, 215, 218);
+    padding-top: 10px;
+margin-top: 30px;}
+footer{clear: both;
+    background-color: rgb(226, 213, 23);
+text-align: center;}
+a{color: antiquewhite;}
