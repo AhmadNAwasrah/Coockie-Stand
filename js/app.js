@@ -1,6 +1,7 @@
 'use strict';
 
 let hoursOfWork = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", 'Total Sales of Each Store'];
+let stores=[];
 function store(storeName, minCustPerHour, maxCustPerHour, avgCustCookies) {
     this.storeName = storeName;
     this.minCustPerHour = minCustPerHour;
@@ -11,6 +12,7 @@ function store(storeName, minCustPerHour, maxCustPerHour, avgCustCookies) {
     this.salesPerHour = [];
     this.sumOfDaySales = 0;
     this.sumOfSalesPerStore = 0;
+    stores.push(this);
 
 
 }
@@ -99,6 +101,7 @@ lima.render();
 let sumPerHour = [];
 let lastTotal = 0;
 function tableFotter() {
+    
     for (let i = 0; i < 14; i++) {
      sumPerHour.push(seattle.salesPerHour[i] + tokyo.salesPerHour[i] + dubai.salesPerHour[i] + paris.salesPerHour[i] + lima.salesPerHour[i]);
 
@@ -131,9 +134,26 @@ function tableFotter() {
 
     }
 }
-tableFotter();
-tokyo.randomCustNumber
 
+var form = document.getElementById('storeNameForm');
+// form.addEventListener('submit', handleFormSubmit);
+// var handleFormSubmit = function (event){
+    form.addEventListener('submit',function (event){
+    
+    event.preventDefault();
+  var storeName = event.target[storeName].value;
+  var minCustPerHour = event.target.minCustPerHour.value;
+var maxCustPerHour = event.target.maxCustPerHour.value;
+   var avgCustCookies = event.target.avg-avgCustCookies.value;
+  console.log(event);
+  
+   console.log(event.target(storeName));
+   let newBrach=new store(storeName,minCustPerHour,maxCustPerHour.avgCustCookies)
+   newBrach.render();
+});
+
+tableFotter();
+console.log(stores);
 
 
 
