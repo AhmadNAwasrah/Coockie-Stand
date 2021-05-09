@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -8,41 +9,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<header>
-<a href="index.html">Home</a>
+    <header>
+        <a href="index.html">Home</a>
     </header>
-<main>
-<table id='sales' >  </table>
-<!-- storeName, minCustPerHour, maxCustPerHour, avgCustCookies -->
-<form >
-    <fieldset>
-      <legend>Salmon Cookies Store</legend>
-      <label for="storeName">New Store  </label><br>
-      <input id='storeName' name="storeName" type="text" placeholder="Enter Store Name" >
-      <br>
+    <main>
+        <table id='sales'> </table>
+        <!-- storeName, minCustPerHour, maxCustPerHour, avgCustCookies -->
+        <form id='storeNameForm'>
+            <fieldset>
+                <legend>Salmon Cookies Store</legend>
+                <label for="storeName">New Store </label><br>
+                <input id='storeName' name="storeName" type="text" placeholder="Enter Store Name">
+                <br>
 
-      <label for="minCustPerHour">Min Customer Per hour</label>
-      <br>
-      <input id='minCustPerHour' name="minCustPerHour" type="text" placeholder="Enter Min Customer">
-      <br>
-      <label for="maxCustPerHour">Max Customer Per hour</label>
-      <br>
-      <input id='maxCustPerHour' name="maxCustPerHour" type="text" placeholder="Enter Max Customer">
-      <br>
-      <label for="avgCustCookies">Avg Cookies Per Customer</label>
-      <br>
-      <input id='avgCustCookies' name="avgCustCookies" type="text" placeholder="Enter Avarge Cookies per Customer">
-       <br>
-       <br>
-      
-    </fieldset>
-    <button id="storeNameForm" type="submit" >Add New Store</button>
-  </form>
+                <label for="minCustPerHour">Min Customer Per hour</label>
+                <br>
+                <input id='minCustPerHour' name="minCustPerHour" type="text" placeholder="Enter Min Customer">
+                <br>
+                <label for="maxCustPerHour">Max Customer Per hour</label>
+                <br>
+                <input id='maxCustPerHour' name="maxCustPerHour" type="text" placeholder="Enter Max Customer">
+                <br>
+                <label for="avgCustCookies">Avg Cookies Per Customer</label>
+                <br>
+                <input id='avgCustCookies' name="avgCustCookies" type="text"
+                    placeholder="Enter Avarge Cookies per Customer">
+                <br>
+                <br>
+                <input  type="submit" value="Add New Store">
+
+            </fieldset>
+        </form>
 
 
-</main>
+    </main>
     <script src='../js/app.js'></script>
-    
+
 </body>
+
 </html>
